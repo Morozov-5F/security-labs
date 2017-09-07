@@ -1,0 +1,6 @@
+[package]
+name = "image_authenticity"
+version = "0.1.0"
+authors = ["Eugene Morozov <zhe3145@yandex.ru>"]
+
+[dependencies]
