@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		467CAE351F7C0CEE00322362 /* FeistelNet.c in Sources */ = {isa = PBXBuildFile; fileRef = 467CAE331F7C0CEE00322362 /* FeistelNet.c */; };
 		46B62ABC1F7590B700180E2E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46B62ABB1F7590B700180E2E /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		467CAE2E1F7BE7C500322362 /* result_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = result_image.png; sourceTree = "<group>"; };
+		467CAE2F1F7BE7C500322362 /* source_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = source_image.png; sourceTree = "<group>"; };
+		467CAE331F7C0CEE00322362 /* FeistelNet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FeistelNet.c; sourceTree = "<group>"; };
+		467CAE341F7C0CEE00322362 /* FeistelNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeistelNet.h; sourceTree = "<group>"; };
 		46B62AB81F7590B700180E2E /* Lab-2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab-2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B62ABB1F7590B700180E2E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		46B62ABE1F7590B700180E2E /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
-		46B62ABF1F7590B700180E2E /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
-		46B62AC01F7590B700180E2E /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
-		46B62AC11F7590B700180E2E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +50,8 @@
 		46B62ABA1F7590B700180E2E /* Lab-2 */ = {
 			isa = PBXGroup;
 			children = (
+				467CAE331F7C0CEE00322362 /* FeistelNet.c */,
+				467CAE341F7C0CEE00322362 /* FeistelNet.h */,
 				46B62ABB1F7590B700180E2E /* main.cpp */,
 				46B62ABD1F7590B700180E2E /* Resources */,
 			);
@@ -58,10 +61,8 @@
 		46B62ABD1F7590B700180E2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				46B62ABE1F7590B700180E2E /* cute_image.jpg */,
-				46B62ABF1F7590B700180E2E /* nice_music.ogg */,
-				46B62AC01F7590B700180E2E /* sansation.ttf */,
-				46B62AC11F7590B700180E2E /* icon.png */,
+				467CAE2E1F7BE7C500322362 /* result_image.png */,
+				467CAE2F1F7BE7C500322362 /* source_image.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -122,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467CAE351F7C0CEE00322362 /* FeistelNet.c in Sources */,
 				46B62ABC1F7590B700180E2E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +224,15 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 478DALVP4B;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -231,6 +242,15 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 478DALVP4B;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
